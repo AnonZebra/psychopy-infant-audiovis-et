@@ -1,0 +1,9 @@
+*_lastrun.py
+notes/
+data/
+infant_audiovisual_eyetrack.py
+*ipynb*
+.iohpid
+exp_snapshots/
+events.hdf5
+.DS_Store
