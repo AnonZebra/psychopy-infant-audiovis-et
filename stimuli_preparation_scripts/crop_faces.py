@@ -3,12 +3,11 @@ Crop images of faces from the CFD (https://www.chicagofaces.org/).
 Here, shoulders and empty space around the faces is removed, to enable the
 faces themselves to take up more of the ROI space.
 
-NOTE that this script actually replaces the original images - you'll
-need to modify the last line (.save()) if you want the original images
-to be left alone. (but it's recommended that you instead simply
-copy the images to a separate directory first, and let this
-script overwrite the originals to avoid issues with having
-both original and cropped versions in the stimuli folders)
+NOTE that this script saves the cropped images in separate folders
+(e.g. 'stimuli/visual/social/male/cropped'). You'll have to replace the
+images in the 'actual' stimuli directories with the cropped
+versions before they'll actually be used by PsychoPy/in
+the experiment.
 """
 
 # imports

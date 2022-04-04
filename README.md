@@ -15,7 +15,7 @@ Here, descriptions are given as if you were planning on replicating the original
 ### Visual stimuli
 The visual stimuli consist of:
 * Faces
-    - From the [Chicago Face Database](https://www.chicagofaces.org/)(CFD). Note that the actual face images aren't included in this repository, for data sensitivity/copyright reasons. Please visit the CFD site to download their material and use it to replace the placeholder images in the subdirectories of 'stimuli/visual/social' yourself.
+    - From the [Chicago Face Database](https://www.chicagofaces.org/)(CFD). Note that the actual face images aren't included in this repository, for data sensitivity/copyright reasons. Please visit the CFD site to download their material and use it to replace the placeholder images in the subdirectories of 'stimuli/visual/social' yourself. If you do use the CFD material, __please remember to give credit as described on the CFD website__.
 * Man-made objects
     - For attributions, see 'stimuli/stimuli_attributions.xlsx'.
 * Natural objects
