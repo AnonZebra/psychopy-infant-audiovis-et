@@ -1,4 +1,4 @@
-__WIP: STIMULI NOT UPLOADED YET__
+__WIP: SHAREABLE VERSION YET TO BE TESTED__
 
 # Infant audiovisual PsychoPy experiment with eyetracking
 This is a [Psychopy](https://psychopy.org/) project consisting of a task where an infant is shown visual stimuli and simultaneously played auditory stimuli, while an eyetracker records their gaze.
@@ -14,20 +14,22 @@ Here, descriptions are given as if you were planning on replicating the original
 
 ### Visual stimuli
 The visual stimuli consist of:
-* Faces
+* Faces (photos)
     - From the [Chicago Face Database](https://www.chicagofaces.org/)(CFD). Note that the actual face images aren't included in this repository, for data sensitivity/copyright reasons. Please visit the CFD site to download their material and use it to replace the placeholder images in the subdirectories of 'stimuli/visual/social' yourself (look at the filenames to see which CFD images were used). If you do use the CFD material, __please remember to give credit as described on the CFD website__.
-* Man-made objects
+    - Include equal number of female and male faces.
+    - The CFD includes data on ethnicity of faces. Focus wasn't on this at all in the original experiment, but faces were selected such that the ethnicity-related proportions would very roughly correspond to actual proportions in the population of Sweden in 2021.
+* Man-made objects (photos)
     - For attributions, see 'stimuli/stimuli_attributions.xlsx'.
-* Natural objects
+* Natural objects (photos)
     - For attributions, see 'stimuli/stimuli_attributions.xlsx'.
-* Computer-rendered geometrical 3D shapes)
-    - These were designed and rendered by designer Amanda Gren, using CAD software.
+* Geometrical shapes (3D computer renditions)
+    - These were designed and rendered by designer and engineering student Amanda Gren, using CAD software.
 
 ### Auditory stimuli
 The auditory stimuli consist of:
 * Swedish spoken words/exclamations
-    - These were recorded by research assistants (?) Andrietta Stadin and Oskar ??? at Uppsala University.
-    - These include recordings of both male and female voices, and these are categorized separately by the experiment.
+    - These were recorded by research assistants Andrietta Stadin and Oskar Allerstrand at Uppsala University.
+    - Include recordings of both male and female voices.
 * Various objects likely to be in the infant's daily surroundings
     - For attributions, see 'stimuli/stimuli_attributions.xlsx'.
 
@@ -59,4 +61,6 @@ If you create a modified (e.g. new set of stimuli) version of the experiment, yo
 ## Attribution
 If you use this project, either for a replication study or for creating a modified version of the experiment, please give proper attribution. There is no published study on this experiment yet, but in the meantime we ask you to __please include a link to this repository__ in any published articles or similar writings.
 
-The experiment was programmed by Lowe Wilsson according to instructions from, and after discussions with, Terje Falck-Ytter, Ana Maria Portugal and Johan Lundin Kleberg. Andrietta Stadin provided valuable feedback and suggestions for improvements. Amanda Gren created the geometric shapes stimuli. Andrietta Stadin and Oskar ??? made audio recordings. Wilsson collected and prepared all other stimuli.
+For details on where experiment stimuli are originally from, see the files 'stimuli/audio/stimuli_attributions.xlsx' and 'stimuli/visual/stimuli_attributions.xlsx'. Some of the stimuli files require attribution, so if you reupload any of the stimuli (e.g. for sharing a modified version of the experiment), make sure to include the attributions as well.
+
+The experiment was programmed by Lowe Wilsson according to instructions from, and after discussions with, Terje Falck-Ytter, Ana Maria Portugal and Johan Lundin Kleberg. Andrietta Stadin provided valuable feedback and suggestions for improvements. Amanda Gren created the geometric shapes stimuli. Andrietta Stadin and Oskar Allerstrand made audio recordings. Wilsson collected and prepared all other stimuli.

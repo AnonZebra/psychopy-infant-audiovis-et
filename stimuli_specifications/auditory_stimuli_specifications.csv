@@ -1,0 +1,13 @@
+file_path,type,sex,duration
+stimuli/audio/social/male/male_oj.wav,social,male,0.857324
+stimuli/audio/social/male/male_boll.wav,social,male,0.860544
+stimuli/audio/social/male/male_hejsan.wav,social,male,0.909569
+stimuli/audio/social/female/female_boll.wav,social,female,0.854853
+stimuli/audio/social/female/female_oj.wav,social,female,0.92551
+stimuli/audio/social/female/female_hejsan.wav,social,female,0.989229
+stimuli/audio/nonsocial/sms.wav,nonsocial,nonsocial,0.532812
+stimuli/audio/nonsocial/skallra.wav,nonsocial,nonsocial,0.958594
+stimuli/audio/nonsocial/leksaksbil.wav,nonsocial,nonsocial,0.584717
+stimuli/audio/nonsocial/dice.wav,nonsocial,nonsocial,0.506009
+stimuli/audio/nonsocial/dörr.wav,nonsocial,nonsocial,0.746848
+stimuli/audio/nonsocial/squeaky_toy.wav,nonsocial,nonsocial,0.599365
