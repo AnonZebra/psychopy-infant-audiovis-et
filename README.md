@@ -15,7 +15,7 @@ Here, descriptions are given as if you were planning on replicating the original
 ### Visual stimuli
 The visual stimuli consist of:
 * Faces
-    - From the [Chicago Face Database](https://www.chicagofaces.org/)(CFD). Note that the actual face images aren't included in this repository, for data sensitivity/copyright reasons. Please visit the CFD site to download their material and use it to replace the placeholder images in the subdirectories of 'stimuli/visual/social' yourself. If you do use the CFD material, __please remember to give credit as described on the CFD website__.
+    - From the [Chicago Face Database](https://www.chicagofaces.org/)(CFD). Note that the actual face images aren't included in this repository, for data sensitivity/copyright reasons. Please visit the CFD site to download their material and use it to replace the placeholder images in the subdirectories of 'stimuli/visual/social' yourself (look at the filenames to see which CFD images were used). If you do use the CFD material, __please remember to give credit as described on the CFD website__.
 * Man-made objects
     - For attributions, see 'stimuli/stimuli_attributions.xlsx'.
 * Natural objects
@@ -32,7 +32,7 @@ The auditory stimuli consist of:
     - For attributions, see 'stimuli/stimuli_attributions.xlsx'.
 
 ### Distraction videos
-The distraction videos that were used in the original experiment depicted three women dancing with balloons in their hands and were provided by ???. If you'd like to reproduce the original experiment as closely as possible, please contact ??? to request the videos.
+The distraction videos that were used in the original experiment depicted three women dancing with balloons in their hands and were provided by ???. If you'd like to reproduce the original experiment as closely as possible, please contact ??? to request the videos. To make it easier to try the experiment out, garbled/vectorized versions of the original distraction videos are included in this repository ('stimuli/pause_videos').
 
 ### Stimuli preparation scripts
 In the directory 'stimuli_preparation_scripts' there are a few Python scripts that were used when developing the original task for modifying the stimuli, e.g. cropping the CFD images. You may use these if you wish. There are also scripts for generating stimuli metadata files, which are used by the PsychoPy experiment to figure out e.g. where the stimuli are stored. You're very likely to want to run these metadata scripts (e.g. 'stimuli_preparation_scripts/compile_attention_audio_metadata.py'). For more information, read the docstrings at the top of the scripts. If you don't already know how to run stand-alone Python scripts, you will need to look up e.g. a tutorial on YouTube (or, you can manually modify the 'stimuli_specifications' directory files if you prefer).
