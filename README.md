@@ -7,6 +7,9 @@ In each trial of the experiment, the participant is shown an attention grabbing 
 
 Every 8th trial is followed by a 'distraction video' whose sole purpose is to keep the infant engaged in the task by making the experiment less monotonous.
 
+## Running the experiment
+Clone/download this project. Set up the eyetracker (see 'Eyetracker setup' section below). Open 'infant_audiovisual_eyetrack.psypexp' with PsychoPy. Click the 'Run' button. You should be shown a loading screen with an elephant first - here, all experiment images are preloaded (to prevent latency during the experiment), which might take 30-60 seconds. Please be patient. After everything is loaded, the experiment should start with a screen showing an attention grabber. Once the eyetracker records that participant (or 'mock eyetracker') gaze is directed at the attention grabber for 200ms, the first trial should start. The experiment then keeps going until all 64 trials are finished.
+
 ## Stimuli
 Note that you may wish to replace the stimuli to run your own version of the experiment. In that case especially, read the 'Preparation scripts' section below; you'll probably want to modify the code and compnents in the PsychoPy project as well.
 
@@ -46,7 +49,13 @@ This experiment was originally developed to be run on a Windows computer, with P
 When you open up the project file ('infant_audiovisual_eyetrack.psyexp') with PsychoPy standalone, you'll find that there is a mix of PsychoPy components added through the GUI, and code snippets which implement special functionality necessary for the experiment, and also handle communication with the eyetracker. For more information about the code, read the embedded comments in the code snippets.
 
 ## Eyetracker setup
-The latest versions of PsychoPy have seen large changes with regard to how eyetracking is handled. You may wish to update this experiment to be more in line with current changes. At a minimum, you will need to update the 'tobii_config.yaml' file with specifications for your eyetracker.
+The latest versions of PsychoPy have seen large changes with regard to how eyetracking is handled. You may wish to update this experiment to be more in line with current changes. At a minimum, you will need to update the 'real_eyetracker_config.yaml' file with specifications for your eyetracker.
+
+### Eyetracker mocking
+If you don't have an eyetracker but still want to try the experiment out, you can use a 'mock' eyetracker, where the 'gaze' is controlled by your mouse. In that case:
+1. Open up the .psyexp file with PsychoPy standalone.
+2. Open up the setup routine's 'code_eyetracker_setup' code component.
+3. In the 'Before Experiment' tab's code, change `MOCK_ON = False` to `MOCK_ON = True`.
 
 ### Eyetracker calibration
 This experiment in itself does not include any eyetracker calibration, so do note that you will need to run a calibration before starting. There are various options for running ET calibration in PsychoPy - in the original study where this experiment was used, a modified version of yh-luo's [psychopy_tobii_infant](https://github.com/yh-luo/psychopy_tobii_infant) project was used.
