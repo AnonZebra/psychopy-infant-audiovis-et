@@ -74,6 +74,12 @@ If you don't have an eyetracker but still want to try the experiment out, you ca
 ### Eyetracker calibration
 This experiment in itself does not include any eyetracker calibration, so do note that you will need to run a calibration before starting. There are various options for running ET calibration in PsychoPy - in the original study where this experiment was used, a modified version of yh-luo's [psychopy_tobii_infant](https://github.com/yh-luo/psychopy_tobii_infant) project was used.
 
+## Experiment output
+To learn about the output produced after running the experiment, see the guide 'documentation/experiment_output_guide.md'.
+
+## Translation
+For instructions on how the experiment can be translated, see the guide 'documentation/experiment_translation_guide.md'.
+
 ## Contributions
 If you notice any problems with the experiment, please start a GitHub issue detailing them. The experiment is not actively developed and it's unlikely that I'll (Lowe) fix any reported errors, but it will help others who'd like to use the experiment know what to expect.
 
