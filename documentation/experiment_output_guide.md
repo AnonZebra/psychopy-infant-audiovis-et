@@ -1,4 +1,4 @@
-# EASE experiment data output 
+# Experiment data output 
 
 Note: __Avoid__ using Microsoft Excel for handling any data output. Using Excel with CSV files often leads to problems, since Excel tends to ruin the formatting of CSV files. Excel might also do things like not showing all the data (to avoid performance issues) without making this clear, which might lead you to falsely believe there are missing data. If you want a tool similar to Excel, you can try [LibreOffice](https://www.libreoffice.org/), which plays much more nicely with CSV files and is free. 
 
@@ -23,7 +23,7 @@ Includes:
 * 'visual_social_prop', 'visual_geometric_prop' et c – Proportion of time spent by participating looking at the different categories of stimuli. E.g., 0.2 for 'visual_social_prop' means that for 20% of the trial's duration, the participant's gaze was directed at the face stimulus ROI. Note that these values are only for convenient data exploration. They are not as accurate as the raw eye tracker data are, since these values are restricted to a ~60 times/second gaze capture rate. 
 * 'visual_social_filepath' et c – Relative (starting from experiment directory) file path to corresponding category's image file. Useful for seeing exactly which image was shown to participant.
 * 'visual_social_pos_x'/'visual_social_pos_y' etc – Describes distance of corresponding category's image from center of screen, in degrees. Positive values point in the right/upward direction. E.g. (-2, 8) would mean that the image was centered at 2 visual degrees to the left and 8 degrees up from screen midpoint. 
-* 'audio_filepath' - Relative file path to trial sound/audio file. This can be used to figure out what type of audio was played, e.g., the file path 'stimuli/audio/social/female/female_oj.wav' means that a social female recording was played. If a trial was silent, 'silent' is recorded here.
+* 'audio_filepath' - Relative file path to trial sound/audio file.
 * 'audio_volume': PsychoPy volume setting used for trial. Note that the scale for this goes from 0 to 1, i.e., it cannot be used to figure out physical air pressure/dB values, since this depends on hardware and Windows audio settings. This is used to figure out if a trial was a 'low volume' or 'high volume' trial.
 * 'audio_type': Type of played audio stimulus ('social'/'non-social'/'silent').
 * 'audio_voice_sex': Sex ('male'/'female') of person whose recorded voice is played, if trial was of type 'social'. For non-social trials, the type name is repeated ('non-social'/'silent') here.

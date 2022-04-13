@@ -12,9 +12,33 @@ Every 8th trial is followed by a 'distraction video' whose sole purpose is to ke
 * An eyetracker connected to the computer and turned on, unless you simulate an eyetracker with your mouse (see 'Eyetracker setup' section below).
 * Two monitors - one for displaying stimuli to the participant, and one for the experimenter where they can monitor participant gaze (if you simulate the eyetracker though, only one monitor is required).
 
+## Version/setup information
+This experiment was originally developed to be run on a Windows computer, with PsychoPy Standalone version 2021.2.2, and a Tobii eyetracker. It's highly recommended that you do comprehensive pilot testing before running it with actual participants. If you're able to, it's recommended that you try to update the experiment to work as well as possible with the most recent version of PsychoPy. Otherwise, the safest option is to simply use PsychoPy v2021.2.2. The 'stimuli preparation scripts' described above were run with Python 3.8.
+
+## PsychoPy code
+When you open up the project file ('infant_audiovisual_eyetrack.psyexp') with PsychoPy standalone, you'll find that there is a mix of PsychoPy components added through the GUI, and code snippets which implement special functionality necessary for the experiment, and also handle communication with the eyetracker. For more information about the code, read the embedded comments in the code snippets.
+
+Many aspects of the experiment are configured in a particular __'setup' code snippet/component__:
+1. Open up the .psyexp file with PsychoPy standalone.
+2. Open up the setup routine's 'code_eyetracker_setup' code component.
+3. In the 'Before Experiment' tab's code, you may change values relating to e.g. 'mocking' an eyetracker (see below) or the size of visual stimuli (`IMG_MAX_WIDTH`, etc.). The code comments (starting with `#`) explain what each value represents.
+
+## Eyetracker setup
+The latest versions of PsychoPy have seen large changes with regard to how eyetracking is handled. You may wish to update this experiment to be more in line with current changes. At a minimum, you will need to update the 'real_eyetracker_config.yaml' file with specifications for your eyetracker, and a value in the 'setup' code snippet:
+1. Go to the 'setup' code snippet (see above).
+2. In the 'Before Experiment' tab's code, change `EYETRACKER_HZ = 600` to `EYETRACKER_HZ = <eyetracker_recording_frequency>`.
+
+### Eyetracker mocking
+If you don't have an eyetracker but still want to try the experiment out, you can use a 'mock' eyetracker, where the 'gaze' is controlled by your mouse. In that case:
+1. Go to the 'setup' code snippet (see above).
+2. In the 'Before Experiment' tab's code, change `MOCK_ON = False` to `MOCK_ON = True`.
+
+### Eyetracker calibration
+This experiment in itself does not include any eyetracker calibration, so do note that you will need to run a calibration before starting. There are various options for running ET calibration in PsychoPy - in the original study where this experiment was used, a modified version of yh-luo's [psychopy_tobii_infant](https://github.com/yh-luo/psychopy_tobii_infant) project was used.
+
 ## Running the experiment
 1. Clone/download this project.
-2. Set up the eyetracker (see 'Eyetracker setup' section below).
+2. Set up the eyetracker (see 'Eyetracker setup' section above).
 3. Open 'infant_audiovisual_eyetrack.psypexp' with PsychoPy.
 4. Click the cogwheel ('Edit experiment settings') icon, go to the 'Screen' tab, and insert specifications appropriate for your monitor (if you haven't already, you also need to set up a monitor in Monitor Center).
 5. In PsychoPy, go to the 'trial' routine and click the 'code_monitor_mirror' (bottommost) code component. Go to the 'Begin Experiment' tab. In the code editor, update line 15 with the size (width, height in pixels) specifications for the screen you'll use to monitor participant gaze. Close the code editor. (if you are simulating the eyetracker, you may skip this step)
@@ -24,8 +48,10 @@ You should be shown a loading screen with an elephant first - here, all experime
 
 When running the experiment as is, you'll note that some stimuli look very odd, as they've been 'garbled' on purpose to make the experiment free to share - see below for more information.
 
+The experimenter may interact with the experiment as it is running, see 'documentation/experimenter_actions_guide.md'.
+
 ## Stimuli
-Note that you may wish to replace the stimuli to run your own version of the experiment. In that case especially, read the 'Preparation scripts' section below; you'll probably want to modify the code and compnents in the PsychoPy project as well.
+Note that you may wish to replace the stimuli to run your own version of the experiment. In that case especially, read the 'Stimuli preparation scripts' section below; you'll probably want to modify the code and compnents in the PsychoPy project as well.
 
 Here, descriptions are given as if you were planning on replicating the original experiment.
 
@@ -56,24 +82,6 @@ The distraction videos that were used in the original experiment depicted three 
 ### Stimuli preparation scripts
 In the directory 'stimuli_preparation_scripts' there are a few Python scripts that were used when developing the original task for modifying the stimuli, e.g. cropping the CFD images. You may use these if you wish. There are also scripts for generating stimuli metadata files, which are used by the PsychoPy experiment to figure out e.g. where the stimuli are stored. You're very likely to want to run these metadata scripts (e.g. 'stimuli_preparation_scripts/compile_attention_audio_metadata.py'). For more information, read the docstrings at the top of the scripts. If you don't already know how to run stand-alone Python scripts, you will need to look up e.g. a tutorial on YouTube (or, you can manually modify the 'stimuli_specifications' directory files if you prefer).
 
-## Version/setup information
-This experiment was originally developed to be run on a Windows computer, with PsychoPy Standalone version 2021.2.2, and a Tobii eyetracker. It's highly recommended that you do comprehensive pilot testing before running it with actual participants. If you're able to, it's recommended that you try to update the experiment to work as well as possible with the most recent version of PsychoPy. Otherwise, the safest option is to simply use PsychoPy v2021.2.2. The 'stimuli preparation scripts' described above were run with Python 3.8.
-
-## PsychoPy code
-When you open up the project file ('infant_audiovisual_eyetrack.psyexp') with PsychoPy standalone, you'll find that there is a mix of PsychoPy components added through the GUI, and code snippets which implement special functionality necessary for the experiment, and also handle communication with the eyetracker. For more information about the code, read the embedded comments in the code snippets.
-
-## Eyetracker setup
-The latest versions of PsychoPy have seen large changes with regard to how eyetracking is handled. You may wish to update this experiment to be more in line with current changes. At a minimum, you will need to update the 'real_eyetracker_config.yaml' file with specifications for your eyetracker.
-
-### Eyetracker mocking
-If you don't have an eyetracker but still want to try the experiment out, you can use a 'mock' eyetracker, where the 'gaze' is controlled by your mouse. In that case:
-1. Open up the .psyexp file with PsychoPy standalone.
-2. Open up the setup routine's 'code_eyetracker_setup' code component.
-3. In the 'Before Experiment' tab's code, change `MOCK_ON = False` to `MOCK_ON = True`.
-
-### Eyetracker calibration
-This experiment in itself does not include any eyetracker calibration, so do note that you will need to run a calibration before starting. There are various options for running ET calibration in PsychoPy - in the original study where this experiment was used, a modified version of yh-luo's [psychopy_tobii_infant](https://github.com/yh-luo/psychopy_tobii_infant) project was used.
-
 ## Experiment output
 To learn about the output produced after running the experiment, see the guide 'documentation/experiment_output_guide.md'.
 
@@ -92,4 +100,4 @@ If you use this project, either for a replication study or for creating a modifi
 
 For details on where experiment stimuli are originally from, see the files 'stimuli/audio/stimuli_attributions.xlsx' and 'stimuli/visual/stimuli_attributions.xlsx'. Some of the stimuli files require attribution, so if you reupload any of the stimuli (e.g. for sharing a modified version of the experiment), make sure to include the attributions as well.
 
-The experiment was programmed at Karolinska Institutet by Lowe Wilsson according to instructions from, and after discussions with, Terje Falck-Ytter, Ana Maria Portugal and Johan Lundin Kleberg. Andrietta Stadin provided valuable feedback and suggestions for improvements. Amanda Gren created the geometric shapes stimuli. Andrietta Stadin and Oskar Allerstrand made audio recordings. Wilsson collected and prepared all other stimuli.
+The experiment was programmed at Karolinska Institutet by Lowe Wilsson according to instructions from, and after discussions with, Terje Falck-Ytter, Ana Maria Vaz Portugal Da Silva and Johan Lundin Kleberg. Andrietta Stadin provided valuable feedback and suggestions for improvements. Amanda Gren created the geometric shapes stimuli. Andrietta Stadin and Oskar Allerstrand made audio recordings. Wilsson collected and prepared all other stimuli.
