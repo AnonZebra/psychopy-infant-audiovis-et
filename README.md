@@ -18,7 +18,11 @@ Every 8th trial is followed by a 'distraction video' whose sole purpose is to ke
 * Two monitors - one for displaying stimuli to the participant, and one for the experimenter where they can monitor participant gaze (if you simulate the eyetracker though, only one monitor is required).
 
 ## Version/setup information
-This experiment was originally developed to be run on a Windows computer, with PsychoPy Standalone version 2021.2.2, and a Tobii eyetracker. It's highly recommended that you do comprehensive pilot testing before running it with actual participants. If you're able to, it's recommended that you try to update the experiment to work as well as possible with the most recent version of PsychoPy. Otherwise, the safest option is to simply use PsychoPy v2021.2.2. The 'stimuli preparation scripts' described above were run with Python 3.8.
+This experiment was originally developed to be run on a Windows computer, with PsychoPy Standalone version 2021.2.2, and a Tobii eyetracker. However, the experiment was updated for being compatible with PsychoPy version v2022.1.2.
+
+It's highly recommended that you do comprehensive pilot testing before running it with actual participants. If you're able to, it's recommended that you try to update the experiment to work as well as possible with the most recent version of PsychoPy. Otherwise, the safest option is to simply use PsychoPy v2022.1.2.
+
+It's a known issue that the experiment in its updated state often cannot be run on Mac computers, unfortunately. This has to do with more general issues with running PsychoPy on Macs. If you encounter this or any other issues, you might try the 'old' version of the experiment, for PsychoPy v2021.2.2, found here: [https://github.com/datalowe/psychopy-infant-audiovis-et/tree/oldversion](https://github.com/datalowe/psychopy-infant-audiovis-et/tree/oldversion).
 
 ## PsychoPy code
 When you open up the project file ('infant_audiovisual_eyetrack.psyexp') with PsychoPy standalone, you'll find that there is a mix of PsychoPy components added through the GUI, and code snippets which implement special functionality necessary for the experiment, and also handle communication with the eyetracker. For more information about the code, read the embedded comments in the code snippets.
@@ -87,6 +91,8 @@ The distraction videos that were used in the original experiment depicted three 
 
 ### Stimuli preparation scripts
 In the directory 'stimuli_preparation_scripts' there are a few Python scripts that were used when developing the original task for modifying the stimuli, e.g. cropping the CFD images. You may use these if you wish. There are also scripts for generating stimuli metadata files, which are used by the PsychoPy experiment to figure out e.g. where the stimuli are stored. You're very likely to want to run these metadata scripts (e.g. 'stimuli_preparation_scripts/compile_attention_audio_metadata.py'). For more information, read the docstrings at the top of the scripts. If you don't already know how to run stand-alone Python scripts, you will need to look up e.g. a tutorial on YouTube (or, you can manually modify the 'stimuli_specifications' directory files if you prefer).
+
+All stimuli preparation scripts were run with Python 3.8.
 
 ## Experiment output
 To learn about the output produced after running the experiment, see the guide 'documentation/experiment_output_guide.md'.
