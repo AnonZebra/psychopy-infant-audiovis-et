@@ -1,6 +1,11 @@
 __WIP: SHAREABLE VERSION YET TO BE TESTED WITH EYETRACKER__
 
 # Infant audiovisual PsychoPy experiment with eyetracking
+
+<img width="400px" src="example_images/trial_ex_animated.gif">
+
+(you can also see a [demo video on Vimeo](https://vimeo.com/705750840))
+
 This is a [Psychopy](https://psychopy.org/) project consisting of a task where an infant is shown visual stimuli and simultaneously played auditory stimuli, while an eyetracker records their gaze.
 
 In each trial of the experiment, the participant is shown an attention grabbing visual stimulus. Once the participant shifts their gaze towards the middle of the screen, a sound is played and shortly thereafter four images are displayed for a few seconds. Finally, a blank screen is displayed for a short duration until the trial ends.
@@ -31,7 +36,8 @@ The latest versions of PsychoPy have seen large changes with regard to how eyetr
 ### Eyetracker mocking
 If you don't have an eyetracker but still want to try the experiment out, you can use a 'mock' eyetracker, where the 'gaze' is controlled by your mouse. In that case:
 1. Go to the 'setup' code snippet (see above).
-2. In the 'Before Experiment' tab's code, change `MOCK_ON = False` to `MOCK_ON = True`.
+2. In the 'Before Experiment' tab's code, change `MOCK_ON = False` to `MOCK_ON = True`. Save and close the code component's window.
+3. Go to the experiment settings (click the cogwheel icon). Go to the 'Screen' tab and replace the 'Monitor' field with a Monitor Center specification for your screen and set the 'Screen' field to 1 (since you'll only be using one screen).
 
 ### Eyetracker calibration
 This experiment in itself does not include any eyetracker calibration, so do note that you will need to run a calibration before starting. There are various options for running ET calibration in PsychoPy - in the original study where this experiment was used, a modified version of yh-luo's [psychopy_tobii_infant](https://github.com/yh-luo/psychopy_tobii_infant) project was used.
