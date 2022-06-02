@@ -1,5 +1,3 @@
-__WIP: SHAREABLE VERSION YET TO BE TESTED WITH EYETRACKER__
-
 # Infant audiovisual PsychoPy experiment with eyetracking
 
 <img width="400px" src="example_images/trial_ex_animated.gif">
